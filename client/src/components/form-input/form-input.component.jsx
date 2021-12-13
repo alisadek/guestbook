@@ -2,14 +2,23 @@ import React from "react";
 
 import "./form-input.styles.scss";
 
-const FormInput = ({ handleChange, label, ...otherProps }) => {
+const FormInput = ({ handleChange, label, rows, ...otherProps }) => {
 	return (
 		<div className='group'>
-			<input
-				className='form-input'
-				onChange={handleChange}
-				{...otherProps}
-			/>
+			{!rows ? (
+				<input
+					className='form-input'
+					onChange={handleChange}
+					{...otherProps}
+				/>
+			) : (
+				<textarea
+					className='form-input'
+					rows={rows}
+					onChange={handleChange}
+					{...otherProps}
+				/>
+			)}
 			{label && (
 				<label
 					className={`${
