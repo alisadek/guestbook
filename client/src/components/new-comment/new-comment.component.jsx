@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Button from "../button/button.component";
 import FormInput from "../form-input/form-input.component";
 
 import "./new-comment.styles.scss";
@@ -53,6 +54,7 @@ const NewComment = () => {
 					rows={3}
 					required
 				/>
+				<Button type='submit'>Submit</Button>
 			</form>
 		</div>
 	);
