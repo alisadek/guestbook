@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import SignInAndSignUp from "../../pages/signin-signup/sigin-signup.component";
 
 import "./header.styles.scss";
 
