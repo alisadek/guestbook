@@ -1,18 +1,23 @@
 .comment {
 	background-color: #f1f1f1;
 	display: flex;
-	width: 35vw;
+	width: 32vw;
 	height: 90px;
 	flex-direction: row;
 	gap: 1rem;
-	border: 1px;
 	border-radius: 5px;
 	padding: 5px;
+	margin: 10px;
 	.avatar {
-		width: 64px;
-		height: 64px;
-		border-radius: 50%;
+		width: 50px;
+		height: 50px;
 		margin: 5px;
+		border-radius: 50%;
+		background-image: url("https://images.unsplash.com/photo-1628890920690-9e29d0019b9b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80");
+		background-size: cover;
+		background-position: -10%;
+		align-self: center;
+		justify-self: center;
 	}
 	.comment-data {
 		display: flex;

@@ -10,7 +10,7 @@ const NewComment = () => {
 		email: "",
 		message: "",
 	});
-
+	const [isLoggedIn, setIsLoggedIn] = useState(true);
 	const handleSubmit = (event) => {
 		event.preventDefault();
 		setFormData({ name: "", email: "", message: "" });
@@ -29,22 +29,26 @@ const NewComment = () => {
 	return (
 		<div className='new-message'>
 			<form onSubmit={handleSubmit}>
-				<FormInput
-					label='Your Name'
-					handleChange={handleChange}
-					name='name'
-					value={formData.name}
-					type='text'
-					required
-				/>
-				<FormInput
-					label='Email'
-					handleChange={handleChange}
-					name='email'
-					value={formData.email}
-					type='email'
-					required
-				/>
+				{!isLoggedIn && (
+					<FormInput
+						label='Your Name'
+						handleChange={handleChange}
+						name='name'
+						value={formData.name}
+						type='text'
+						required
+					/>
+				)}
+				{!isLoggedIn && (
+					<FormInput
+						label='Email'
+						handleChange={handleChange}
+						name='email'
+						value={formData.email}
+						type='email'
+						required
+					/>
+				)}
 				<FormInput
 					label='Message'
 					handleChange={handleChange}
